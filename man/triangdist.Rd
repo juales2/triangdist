@@ -30,8 +30,10 @@ rtriang(n, min = 0, max = 1, mode = 0.5)
 \item{n}{number of observations.}
 }
 \value{
-\code{dtriang} gives the density, \code{ptriang} gives the distribution function,
-\code{qtriang} gives the quantile function, and \code{rtriang} generates random deviates.
+\code{dtriang} gives the density, \code{ptriang} gives the
+distribution function,
+\code{qtriang} gives the quantile function, and \code{rtriang}
+generates random deviates.
 }
 \description{
 Density, distribution function, quantile function and random

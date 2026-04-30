@@ -53,10 +53,11 @@ ptriang <- function(q,
                     mode = 0.5) {
   check_params(min, max, mode)
 
-  ifelse(q <= min, 0, ifelse(q < mode, (q - min)^2 / ((max - min) *
-                                                        (mode - min)), ifelse(q < max, 1 - (max - q)^2 / ((max - min) *
-                                                                                                            (max - mode)
-                                                        ), 1)))
+  ifelse(q <= min, 0, ifelse(q < mode, (q - min)^2 /
+                               ((max - min) * (mode - min)),
+                             ifelse(q < max, 1 - (max - q)^2
+                                    / ((max - min) * (max - mode)
+                                    ), 1)))
 }
 
 #' @rdname triangdist
@@ -72,7 +73,8 @@ qtriang <- function(p,
 
   fc <- (mode - min) / (max - min)
 
-  ifelse(p < fc, min + sqrt(p * (max - min) * (mode - min)), max - sqrt((1 - p) * (max - min) * (max - mode)))
+  ifelse(p < fc, min + sqrt(p * (max - min) * (mode - min)),
+         max - sqrt((1 - p) * (max - min) * (max - mode)))
 }
 
 #' @rdname triangdist
