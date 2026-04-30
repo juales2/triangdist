@@ -10,8 +10,10 @@
 #' @param max upper limit of the distribution (b).
 #' @param mode peak of the distribution (c).
 #'
-#' @return `dtriang` gives the density, `ptriang` gives the distribution function,
-#' `qtriang` gives the quantile function, and `rtriang` generates random deviates.
+#' @return `dtriang` gives the density, `ptriang` gives the
+#' distribution function,
+#' `qtriang` gives the quantile function, and `rtriang`
+#' generates random deviates.
 #' @name triangdist
 NULL
 
@@ -33,8 +35,14 @@ dtriang <- function(x,
   check_params(min, max, mode)
 
   ifelse(x < min |
-           x > max, 0, ifelse(x < mode, 2 * (x - min) / ((max - min) * (mode - min)), ifelse(x == mode, 2 / (max - min), 2 * (max - x) / ((max - min) * (max - mode)
-           ))))
+           x > max, 0, ifelse(x < mode, 2 * (x - min) /
+                                ((max - min) * (mode - min)),
+                              ifelse(x == mode, 2 /
+                                       (max - min), 2 *
+                                       (max - x) /
+                                       ((max - min) *
+                                           (max - mode)
+                                       ))))
 }
 
 #' @rdname triangdist
