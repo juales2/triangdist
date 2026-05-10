@@ -5,7 +5,14 @@ test_that("Error handling works", {
     max = 1,
     mode = 1.5
   ),
-  "min cannot be greater than max")
+  "min must be strictly less than max")
+  expect_error(dtriang(
+    0.5,
+    min = 1,
+    max = 1,
+    mode = 1
+  ),
+  "min must be strictly less than max")
   expect_error(dtriang(
     0.5,
     min = 0,
